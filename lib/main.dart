@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rto_projects/view/btnavi.dart';
+import 'package:provider/provider.dart';
+import 'package:rto_projects/controller/category.controller.dart';
+import 'package:rto_projects/controller/test.controller.dart';
+import 'package:rto_projects/view/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +14,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiProvider(providers: [
+      ChangeNotifierProvider(create: (_) => Categorycontroller()),
+      ChangeNotifierProvider(create: (_)=> Testcontroller() )
+    ],
+    child: MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: Btnavi(),
+      home: Dashboard()
+    )
     );
   }
 }
