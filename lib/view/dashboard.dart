@@ -100,7 +100,7 @@ class _DashboardState extends State<Dashboard> {
                     color: Colors.white,
                     elevation: 5,
                     child: Container(
-                      height: MediaQuery.of(context).size.height * 0.2,
+                      height: MediaQuery.of(context).size.height * 0.170,
                       width: MediaQuery.of(context).size.width * 0.3,
                       child: Align(
                         alignment: Alignment.center,
@@ -124,7 +124,7 @@ class _DashboardState extends State<Dashboard> {
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.2,
+                    height: MediaQuery.of(context).size.height * 0.170,
                     width: MediaQuery.of(context).size.width * 0.3,
                     child: Align(
                       alignment: Alignment.center,
@@ -147,7 +147,7 @@ class _DashboardState extends State<Dashboard> {
                   color: Colors.white,
                   elevation: 5,
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.2,
+                    height: MediaQuery.of(context).size.height * 0.170,
                     width: MediaQuery.of(context).size.width * 0.3,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -179,27 +179,131 @@ class _DashboardState extends State<Dashboard> {
           Positioned(
             bottom: MediaQuery.of(context).size.height * 0.450,
             left: MediaQuery.of(context).size.width * 0.0999,
-            child: Image.asset("assets/sugnal.png", height: 60),
+            child: Image.asset("assets/sugnal.png", height: 55),
           ),
           Positioned(
             bottom: MediaQuery.of(context).size.height * 0.450,
             right: MediaQuery.of(context).size.width * 0.1,
             left: MediaQuery.of(context).size.width * 0.099,
-            child: Image.asset("assets/trafic.png", height: 62),
+            child: Image.asset("assets/trafic.png", height: 55),
           ),
           Positioned(
             bottom: MediaQuery.of(context).size.height * 0.450,
             left: MediaQuery.of(context).size.width * 0.7,
             right: MediaQuery.of(context).size.width * 0.040,
-            child: Image.asset("assets/str.png", height: 60),
+            child: Image.asset("assets/str.png", height: 55),
           ),
           Positioned(
-            top: MediaQuery.of(context).size.height * 0.51,
-            right: MediaQuery.of(context).size.width * 0.6,
+            top: MediaQuery.of(context).size.height * 0.48,
+            right: MediaQuery.of(context).size.width * 0.75,
             child: Text(
-              "Driving Lessons",
+              "Category",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
+          ),
+
+          Positioned(
+            top: MediaQuery.of(context).size.height * 0.55,
+            right: MediaQuery.of(context).size.width * 0.010,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Card(
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(color: Colors.blueAccent, width: 1),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+
+                    shadowColor: Colors.blueAccent,
+                    color: Colors.white,
+                    elevation: 5,
+                    child: Container(
+                      height: MediaQuery.of(context).size.height * 0.170,
+                      width: MediaQuery.of(context).size.width * 0.3,
+                      child: Align(
+                        alignment: Alignment.center,
+                        child: Text(
+                          " Driving \nManuals",
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  color: Colors.white,
+                  shadowColor: Colors.blueAccent,
+                  elevation: 5,
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.blueAccent, width: 1),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.170,
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        " Road\n Rules",
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  shadowColor: Colors.blueAccent,
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.blueAccent, width: 1),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  color: Colors.white,
+                  elevation: 5,
+                  child: Container(
+                    height: MediaQuery.of(context).size.height * 0.170,
+                    width: MediaQuery.of(context).size.width * 0.3,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            "   Parking \nTechniques",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: MediaQuery.of(context).size.height * 0.18,
+            left: MediaQuery.of(context).size.width * 0.0999,
+            child: Image.asset("assets/driving_maua.png", height: 70),
+          ),
+          Positioned(
+            bottom: MediaQuery.of(context).size.height * 0.18,
+            right: MediaQuery.of(context).size.width * 0.1,
+            left: MediaQuery.of(context).size.width * 0.099,
+            child: Image.asset("assets/park_rules.png", height: 70),
+          ),
+          Positioned(
+            bottom: MediaQuery.of(context).size.height * 0.18,
+            left: MediaQuery.of(context).size.width * 0.7,
+            right: MediaQuery.of(context).size.width * 0.040,
+            child: Image.asset("assets/road_rules.png", height: 70),
           ),
         ],
       ),
