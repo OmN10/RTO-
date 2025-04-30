@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rto_projects/controller/category.controller.dart';
 import 'package:rto_projects/controller/test.controller.dart';
-import 'package:rto_projects/view/dashboard.dart';
+import 'package:rto_projects/view/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => Testcontroller()),
       ],
       child: MaterialApp(
-        title: 'Flutter Dubeunemo',
+        title: 'Flutter Demo',
         theme: ThemeData(),
-        home: Dashboard(),
+        home: Splash(),
       ),
     );
   }

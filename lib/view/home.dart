@@ -13,7 +13,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 100,
+        toolbarHeight: MediaQuery.sizeOf(context).height * 0.09,
         backgroundColor: const Color.fromARGB(255, 37, 103, 209),
         centerTitle: true,
         title: Text(
@@ -66,7 +66,7 @@ class _HomeState extends State<Home> {
                       Image.asset(
                         "assets/car.png",
                         fit: BoxFit.fill,
-                        height: 120,
+                        height: MediaQuery.sizeOf(context).width * 0.3,
                       ),
                     ],
                   ),
@@ -343,18 +343,18 @@ class _HomeState extends State<Home> {
             ),
           ),
           Positioned(
-            bottom: MediaQuery.of(context).size.height * 0.17,
+            bottom: MediaQuery.of(context).size.height * 0.19,
             left: MediaQuery.of(context).size.width * 0.0999,
             child: Image.asset("assets/driving_maua.png", height: 60),
           ),
           Positioned(
-            bottom: MediaQuery.of(context).size.height * 0.17,
+            bottom: MediaQuery.of(context).size.height * 0.19,
             right: MediaQuery.of(context).size.width * 0.1,
             left: MediaQuery.of(context).size.width * 0.099,
             child: Image.asset("assets/park_rules.png", height: 60),
           ),
           Positioned(
-            bottom: MediaQuery.of(context).size.height * 0.17,
+            bottom: MediaQuery.of(context).size.height * 0.19,
             left: MediaQuery.of(context).size.width * 0.7,
             right: MediaQuery.of(context).size.width * 0.040,
             child: Image.asset("assets/road_rules.png", height: 60),
