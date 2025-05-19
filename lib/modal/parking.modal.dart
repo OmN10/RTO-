@@ -1,13 +1,13 @@
 
-class Beginner {
+class Parking {
     String? id;
     String? level;
     String? name;
     String? description;
 
-    Beginner({this.id, this.level, this.name, this.description});
+    Parking({this.id, this.level, this.name, this.description});
 
-    Beginner.fromJson(Map<String, dynamic> json) {
+    Parking.fromJson(Map<String, dynamic> json) {
         id = json["id"];
         level = json["level"];
         name = json["name"];
@@ -22,4 +22,8 @@ class Beginner {
         _data["description"] = description;
         return _data;
     }
+    static List<Parking> fromjsonlist(List parkingList) {
+    return parkingList.map((e) => Parking.fromJson(e)).toList();
+  }
+
 }

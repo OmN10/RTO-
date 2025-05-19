@@ -14,7 +14,7 @@ class Onboarding extends StatelessWidget {
             padding: EdgeInsets.only(
               top: MediaQuery.sizeOf(context).height * 0.493,
             ),
-            child: Image.asset('assets/blackroad.png'),
+            child: Image.asset('assets/blackroad.png', fit: BoxFit.cover),
           ),
           Padding(
             padding: EdgeInsets.only(
@@ -104,7 +104,7 @@ class Onboarding extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue,
                     ),
-                    child: Text("Next"),
+                    child: Text("Next", style: TextStyle(color: Colors.white)),
                   ),
                 ),
               ),

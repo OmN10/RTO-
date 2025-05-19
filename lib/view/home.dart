@@ -191,38 +191,6 @@ class _HomeState extends State<Home> {
                               ),
                             ),
                           ),
-                          Card(
-                            shadowColor: Colors.blueAccent,
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(
-                                color: Colors.blueAccent,
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            color: Colors.white,
-                            elevation: 5,
-                            child: Container(
-                              height:
-                                  MediaQuery.of(context).size.height * 0.155,
-                              width: MediaQuery.of(context).size.width * 0.3,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Align(
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      "",
-                                      style: TextStyle(
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
                         ],
                       ),
                     ),

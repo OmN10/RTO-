@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rto_projects/controller/category.controller.dart';
-import 'package:rto_projects/view/drivingmanuals.dart';
+import 'package:rto_projects/view/level.dart';
 
 class Catogories extends StatefulWidget {
   const Catogories({super.key});
@@ -95,7 +95,7 @@ class _CatogoriesState extends State<Catogories> {
           itemBuilder: (context, index) {
             final item = controller.CategoryList![index];
             return context.watch<Categorycontroller>().CategoryList == null
-                ? CircularProgressIndicator()
+                ? Center(child: CircularProgressIndicator())
                 : Card(
                   color: Colors.white,
                   elevation: 5,
@@ -130,9 +130,7 @@ class _CatogoriesState extends State<Catogories> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(
-                                builder: (context) => Drivingmanuals(),
-                              ),
+                              MaterialPageRoute(builder: (context) => Level()),
                             );
                           },
                           icon: Image.asset("assets/exit.png", height: 43),

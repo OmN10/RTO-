@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:rto_projects/view/beginner.dart';
 import 'package:rto_projects/view/dashboard.dart';
 
-class Drivingmanuals extends StatefulWidget {
-  const Drivingmanuals({super.key});
+class Level extends StatefulWidget {
+  const Level({super.key});
 
   @override
-  State<Drivingmanuals> createState() => _DrivingmanualsState();
+  State<Level> createState() => _LevelState();
 }
 
-class _DrivingmanualsState extends State<Drivingmanuals> {
+class _LevelState extends State<Level> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +35,15 @@ class _DrivingmanualsState extends State<Drivingmanuals> {
               height: MediaQuery.sizeOf(context).height * 0.2,
               width: MediaQuery.sizeOf(context).width * double.infinity,
 
-              child: Text("Beginner", style: TextStyle(fontSize: 30)),
+              child: InkWell(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => Beginner()),
+                  );
+                },
+                child: Text("Beginner", style: TextStyle(fontSize: 30)),
+              ),
             ),
           ),
           SizedBox(height: MediaQuery.sizeOf(context).height * 0.01),
